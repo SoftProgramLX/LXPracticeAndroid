@@ -1,0 +1,422 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_release_asked_war" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            tools:context=".MainActivity" >
+
+            <!-- 赛制 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/askedWar_item_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="赛制"
+                    android:textSize="@dimen/textSize" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radiob_war_doubles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        style="@style/ButtonText"
+                        android:text="双打"
+                        android:textSize="@dimen/detailSize" />
+
+                    <RadioButton
+                        android:id="@+id/radiob_war_singles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        style="@style/ButtonText"
+                        android:button="@null"
+                        android:text="单打"
+                        android:textSize="@dimen/detailSize" />
+
+                    <RadioButton
+                        android:id="@+id/radiob_war_3v3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        style="@style/ButtonText"
+                        android:button="@null"
+                        android:text="3V3"
+                        android:textSize="@dimen/detailSize" />
+
+                    <RadioButton
+                        android:id="@+id/radiob_war_5v5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        style="@style/ButtonText"
+                        android:button="@null"
+                        android:text="五羽伦比"
+                        android:textSize="@dimen/detailSize" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <include layout="@layout/gap_line" />
+
+            <!-- 类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/askedWar_item_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="类型"
+                    android:textSize="@dimen/textSize" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tvbar"
+                        android:button="@null"
+                        android:checked="true"
+                        android:text="补发"
+                        android:textSize="@dimen/detailSize" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/tvbar"
+                        android:button="@null"
+                        android:text="发起"
+                        android:textSize="@dimen/detailSize" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <include layout="@layout/gap_line" />
+
+            <!-- 计分 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/askedWar_item_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="计分"
+                    android:textSize="@dimen/textSize" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-5dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="21分制"
+                        android:textSize="@dimen/detailSize" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/tvbar"
+                        android:text="自定义"
+                        android:textSize="@dimen/detailSize" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <include layout="@layout/gap_line" />
+
+            <!-- 开始时间 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/askedWar_item_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="开始时间"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/text_askedWar_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="2016-05-24 14:11"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <include layout="@layout/gap_line" />
+
+            <!-- 红队 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/text_red_team"
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="红队"
+                    android:textSize="@dimen/textSize" />
+
+                <Util.LXListView
+                    android:id="@+id/listView_red_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/text_red_team"
+                    android:divider="#00000000" >
+                </Util.LXListView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_asked_war_hide_add_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/listView_red_team"
+                    android:layout_below="@+id/listView_red_team"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_add_red_team"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/jiahao" />
+
+                    <TextView
+                        android:id="@+id/text_add_red_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="添加成员"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include layout="@layout/gap_line" />
+
+            <!-- 蓝队 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/text_blue_team"
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="蓝队"
+                    android:textSize="@dimen/textSize" />
+
+                <Util.LXListView
+                    android:id="@+id/listView_blue_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/text_blue_team"
+                    android:divider="#00000000" >
+                </Util.LXListView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_asked_war_hide_add_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/listView_blue_team"
+                    android:layout_below="@+id/listView_blue_team"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_add_blue_team"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/jiahao" >
+                    </Button>
+
+                    <TextView
+                        android:id="@+id/text_add_blue_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="添加成员"
+                        android:textSize="@dimen/textSize" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <include layout="@layout/gap_line" />
+
+            <!-- 比赛结果 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/askedWar_item_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="比赛结果"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="红队"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/edit_red_team_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/tvbar"
+                    android:digits="1234567890"
+                    android:hint="21"
+                    android:minWidth="60dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/detailSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" : "
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/edit_blue_team_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/tvbar"
+                    android:digits="1234567890"
+                    android:hint="19"
+                    android:minWidth="60dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/detailSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="蓝队"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <include layout="@layout/gap_line" />
+
+            <!-- 留言 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/askedWar_title_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/askedWar_titleBtn_margin"
+                    android:text="留言"
+                    android:textSize="@dimen/textSize" />
+
+                <EditText
+                    android:id="@+id/edit_blue_team_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/tvbar"
+                    android:gravity="left|top"
+                    android:hint="说明下约战安排的相关信息，留言字数控制在50字以内"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:minLines="2"
+                    android:singleLine="true"
+                    android:textSize="@dimen/detailSize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_release_asked_war"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:text="发布"
+        android:textColor="@color/white"
+        android:textSize="17dp" />
+
+</RelativeLayout>
